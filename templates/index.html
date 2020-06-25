@@ -1,13 +1,17 @@
 <html>
     <head>
-        <title>Welcome!</title>
+        <title>Blackjack!</title>
     </head>
     <body>
-        <h1>Hello world!</h1>
-        <p>We can build a full webpage here</p>
+        <h2>Let's play blackjack!</h2>
+        <p>{{props.message}}</p>
+        <p>{{props.message2}}</p>
+        <p>{{props.message3}}</p>
         <form>
-            <input type="text" name="nickname" value="Enter your nickname"/>
-            <input type="submit" value="Submit"/>
+            <input type="radio" id="Hit" name="blackjack" value="Hit" onclick="window.location='/hit'"/>
+            <label for="Hit">Hit</label><br>
+            <input type="radio" id="Stand" name="blackjack" value="Stand" onclick="window.location='/stand'"/>
+            <label for="Stand">Stand</label><br>
         </form>
     </body>
 </html>
