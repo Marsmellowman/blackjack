@@ -346,7 +346,7 @@ def stand():
                     }
             else:
                 break
-        if int(sum2) >= int(sum1):
+        if int(sum2) >= int(sum1) and int(sum2) < 21:
             props = {
             "message": "your hand is " + str(player_hand) ,
             "message2": "the dealer's hand is " + str(dealer_hand),
@@ -354,6 +354,15 @@ def stand():
             "pcards": player_image,
             "dcards": dealer_image
             }
+        else:
+            props = {
+            "message": "your hand is " + str(player_hand) ,
+            "message2": "the dealer's hand is " + str(dealer_hand),
+            "message3": "you win!",
+            "pcards": player_image,
+            "dcards": dealer_image
+            }
+
     return render_template('index.html', props = props, time = datetime.now)
 
     # elif int(sum1) <= int(sum2):
