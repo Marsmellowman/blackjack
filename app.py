@@ -1,14 +1,75 @@
 # ---- YOUR APP STARTS HERE ----
 # -- Import section --
 from flask import Flask, render_template, request, redirect
-
-
-
+from datetime import datetime
 # -- Initialization section --
 app = Flask(__name__)
-
-
+def ace():
+    if 'A of Spades' in player_hand or 'A of Hearts' in player_hand or 'A of Clubs' in player_hand or 'A of Diamonds' in player_hand:
+            sum1 = sum1 - 10
+            props = {
+            "message": "your hand is " + str(player_hand) ,
+            "message2": "the dealer's hand is " + str(dealer_hand)
+            } 
+    else:
+        props = {
+        "message": "you lose"
+        }
 #______DECK_______
+deck_pic = {
+    '2 of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Atlas_deck_2_of_spades.svg/540px-Atlas_deck_2_of_spades.svg.png",
+    '2 of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Atlas_deck_2_of_hearts.svg/540px-Atlas_deck_2_of_hearts.svg.png",
+    '2 of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Atlas_deck_2_of_clubs.svg/800px-Atlas_deck_2_of_clubs.svg.png",
+    '2 of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Atlas_deck_2_of_diamonds.svg/800px-Atlas_deck_2_of_diamonds.svg.png",
+    '3 of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Atlas_deck_3_of_spades.svg/800px-Atlas_deck_3_of_spades.svg.png",
+    '3 of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Atlas_deck_3_of_hearts.svg/800px-Atlas_deck_3_of_hearts.svg.png",
+    '3 of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Atlas_deck_3_of_clubs.svg/800px-Atlas_deck_3_of_clubs.svg.png",
+    '3 of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Atlas_deck_3_of_diamonds.svg/800px-Atlas_deck_3_of_diamonds.svg.png",
+    '4 of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Atlas_deck_4_of_spades.svg/80px-Atlas_deck_4_of_spades.svg.png",
+    '4 of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Atlas_deck_4_of_hearts.svg/800px-Atlas_deck_4_of_hearts.svg.png",
+    '4 of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Atlas_deck_4_of_clubs.svg/80px-Atlas_deck_4_of_clubs.svg.png",
+    '4 of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Atlas_deck_4_of_diamonds.svg/800px-Atlas_deck_4_of_diamonds.svg.png",
+    '5 of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Atlas_deck_5_of_spades.svg/800px-Atlas_deck_5_of_spades.svg.png",
+    '5 of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Atlas_deck_5_of_hearts.svg/800px-Atlas_deck_5_of_hearts.svg.png",
+    '5 of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Atlas_deck_5_of_clubs.svg/800px-Atlas_deck_5_of_clubs.svg.png",
+    '5 of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Atlas_deck_5_of_diamonds.svg/800px-Atlas_deck_5_of_diamonds.svg.png",
+    '6 of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Atlas_deck_6_of_spades.svg/80px-Atlas_deck_6_of_spades.svg.png",
+    '6 of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Atlas_deck_6_of_hearts.svg/80px-Atlas_deck_6_of_hearts.svg.png",
+    '6 of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Atlas_deck_6_of_clubs.svg/80px-Atlas_deck_6_of_clubs.svg.png",
+    '6 of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Atlas_deck_6_of_diamonds.svg/800px-Atlas_deck_6_of_diamonds.svg.png",
+    '7 of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Atlas_deck_7_of_spades.svg/80px-Atlas_deck_7_of_spades.svg.png",
+    '7 of Hearts': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Atlas_deck_7_of_hearts.svg/80px-Atlas_deck_7_of_hearts.svg.png',
+    '7 of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Atlas_deck_7_of_clubs.svg/80px-Atlas_deck_7_of_clubs.svg.png",
+    '7 of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Atlas_deck_7_of_diamonds.svg/80px-Atlas_deck_7_of_diamonds.svg.png",
+    '8 of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Atlas_deck_8_of_spades.svg/80px-Atlas_deck_8_of_spades.svg.png",
+    '8 of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Atlas_deck_8_of_hearts.svg/80px-Atlas_deck_8_of_hearts.svg.png",
+    '8 of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Atlas_deck_8_of_clubs.svg/80px-Atlas_deck_8_of_clubs.svg.png",
+    '8 of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Atlas_deck_8_of_diamonds.svg/80px-Atlas_deck_8_of_diamonds.svg.png",
+    '9 of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Atlas_deck_9_of_spades.svg/80px-Atlas_deck_9_of_spades.svg.png",
+    '9 of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Atlas_deck_9_of_hearts.svg/80px-Atlas_deck_9_of_hearts.svg.png",
+    '9 of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Atlas_deck_9_of_clubs.svg/80px-Atlas_deck_9_of_clubs.svg.png",
+    '9 of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Atlas_deck_9_of_diamonds.svg/80px-Atlas_deck_9_of_diamonds.svg.png",
+    '10 of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Atlas_deck_10_of_spades.svg/80px-Atlas_deck_10_of_spades.svg.png",
+    '10 of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Atlas_deck_10_of_hearts.svg/80px-Atlas_deck_10_of_hearts.svg.png",
+    '10 of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Atlas_deck_10_of_clubs.svg/80px-Atlas_deck_10_of_clubs.svg.png",
+    '10 of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Atlas_deck_10_of_diamonds.svg/800px-Atlas_deck_10_of_diamonds.svg.png",
+    'J of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Jack_of_spades_en.svg/83px-Jack_of_spades_en.svg.png",
+    'J of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Jack_of_hearts_en.svg/83px-Jack_of_hearts_en.svg.png",
+    'J of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Jack_of_clubs_en.svg/800px-Jack_of_clubs_en.svg.png",
+    'J of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Jack_of_diamonds_en.svg/83px-Jack_of_diamonds_en.svg.png",
+    'Q of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Queen_of_spades_en.svg/83px-Queen_of_spades_en.svg.png",
+    'Q of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Queen_of_hearts_en.svg/83px-Queen_of_hearts_en.svg.png",
+    'Q of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Queen_of_clubs_en.svg/83px-Queen_of_clubs_en.svg.png",
+    'Q of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Queen_of_diamonds_en.svg/83px-Queen_of_diamonds_en.svg.png",
+    'K of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/King_of_spades_en.svg/83px-King_of_spades_en.svg.png",
+    'K of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/King_of_hearts_en.svg/83px-King_of_hearts_en.svg.png",
+    'K of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/King_of_clubs_en.svg/83px-King_of_clubs_en.svg.png",
+    'K of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/King_of_diamonds_en.svg/83px-King_of_diamonds_en.svg.png",
+    'A of Spades': "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ace_of_spades.svg/800px-Ace_of_spades.svg.png",
+    'A of Hearts': "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ace_of_hearts.svg/83px-Ace_of_hearts.svg.png",
+    'A of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Ace_of_clubs.svg/83px-Ace_of_clubs.svg.png",
+    'A of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ace_of_diamonds.svg/83px-Ace_of_diamonds.svg.png"
+    }
 deck_dict = {
     '2 of Spades': 2,
     '2 of Hearts': 2,
@@ -63,13 +124,6 @@ deck_dict = {
     'A of Clubs': 11,
     'A of Diamonds': 11
     }
-
-
-
-
-
-        
-
 # -- Routes section --
 import random
 player_hand = []
@@ -104,14 +158,12 @@ def index():
         dealer_hand.append(deck[0])
         deck.remove(deck[0])
     else:
-        deck.append(player_hand[0])
-        player_hand.remove(player_hand[0])
-        deck.append(player_hand[0])
-        player_hand.remove(player_hand[0])
-        deck.append(dealer_hand[0])
-        dealer_hand.remove(dealer_hand[0])
-        deck.append(dealer_hand[0])
-        dealer_hand.remove(dealer_hand[0])
+        while len(player_hand) > 0:
+            deck.append(player_hand[0])
+            player_hand.remove(player_hand[0])
+        while len(dealer_hand) > 0:
+            deck.append(dealer_hand[0])
+            dealer_hand.remove(dealer_hand[0])
         random.shuffle(deck)
         player_hand.append(deck[0])
         deck.remove(deck[0])
@@ -121,36 +173,118 @@ def index():
         deck.remove(deck[0])
         dealer_hand.append(deck[0])
         deck.remove(deck[0])
-        
-    props = {
-        "message": "your hand is " + str(player_hand) ,
-        "message2": "the dealer's hand is " + str(dealer_hand)
-        }
-    return render_template('index.html', props = props)
-
-
-#_______HANDS_________
-
-
-@app.route('/hit')
-def hit():
-    player_hand.append(deck[0])
-    deck.remove(deck[0])
-    props = {
-        "message": "your hand is " + str(player_hand) ,
-        "message2": "the dealer's hand is " + str(dealer_hand)
-        }
-    return render_template('index.html', props = props)
-
-@app.route('/stand')
-
-def stand():
-    sum = 0
-    for i in range(0, len(player_hand)):
-        sum = sum + (deck_dict[player_hand[i]])
     props = {
         "message": "your hand is " + str(player_hand) ,
         "message2": "the dealer's hand is " + str(dealer_hand),
-        "message3": "total value in hand = " + str(sum)
+        "pcard1": deck_pic['2 of Spades']
+        }
+    return render_template('index.html', props = props, time=datetime.now())
+#_______HANDS_________
+@app.route('/hit')
+def hit():
+    sum1 = 0
+    for i in range(0, len(player_hand)):
+        sum1 = sum1 + (deck_dict[player_hand[i]])
+    player_hand.append(deck[0])
+    deck.remove(deck[0])
+    sum1 = sum1 + (deck_dict[player_hand[-1]])
+    if int(sum1) > 21:
+        if 'A of Spades' in player_hand:
+            deck_dict['A of Spades'] = 1
+            props = {
+            "message": "your hand is " + str(player_hand) ,
+            "message2": "the dealer's hand is " + str(dealer_hand)
+            }
+        elif 'A of Hearts' in player_hand:
+            deck_dict['A of Hearts'] = 1
+            props = {
+            "message": "your hand is " + str(player_hand) ,
+            "message2": "the dealer's hand is " + str(dealer_hand)
+            }
+        elif 'A of Clubs' in player_hand:
+            deck_dict['A of Clubs'] = 1
+            props = {
+            "message": "your hand is " + str(player_hand) ,
+            "message2": "the dealer's hand is " + str(dealer_hand)
+            }
+        elif 'A of Diamonds' in player_hand:
+            deck_dict['A of Diamonds'] = 1
+            props = {
+            "message": "your hand is " + str(player_hand) ,
+            "message2": "the dealer's hand is " + str(dealer_hand)
+            }
+        else:
+             props = {
+                "message": "you lose",
+                "message2": "your hand is " + str(player_hand) ,
+                "message3": "the dealer's hand is " + str(dealer_hand),
+                }
+    else:
+        props = {
+            "message": "your hand is " + str(player_hand) ,
+            "message2": "the dealer's hand is " + str(dealer_hand)
+            }
+    return render_template('index.html', props = props)
+@app.route('/stand')
+def stand():
+    sum1 = 0
+    for i in range(0, len(player_hand)):
+        sum1 = sum1 + (deck_dict[player_hand[i]])
+        if int(sum1) > 21:
+            if 'A of Spades' in player_hand or 'A of Hearts' in player_hand or 'A of Clubs' in player_hand or 'A of Diamonds' in player_hand:
+                sum1 = sum1 - 10
+    sum2 = 0
+    for i in range(0, len(dealer_hand)):
+        sum2 = sum2 + (deck_dict[dealer_hand[i]])
+    while int(sum2) < 17:
+        dealer_hand.append(deck[0])
+        deck.remove(deck[0])
+        sum2 = sum2 + (deck_dict[dealer_hand[-1]])
+        if int(sum2) > 21:
+            if 'A of Spades' in player_hand or 'A of Hearts' in player_hand or 'A of Clubs' in player_hand or 'A of Diamonds' in player_hand:
+                sum2 = sum2 - 10
+                if sum2 > sum1:
+                    props = {
+                    "message": "your hand is " + str(player_hand) ,
+                    "message2": "the dealer's hand is " + str(dealer_hand),
+                    "message3": "you lose",
+                }
+            else:  
+                props = {
+                "message": "your hand is " + str(player_hand) ,
+                "message2": "the dealer's hand is " + str(dealer_hand),
+                "message3": "you win"
+                }
+    while int(sum1) > int(sum2):
+        dealer_hand.append(deck[0])
+        deck.remove(deck[0])
+        sum2 = sum2 + (deck_dict[dealer_hand[-1]])
+        if int(sum2) > 21:
+            if 'A of Spades' in player_hand or 'A of Hearts' in player_hand or 'A of Clubs' in player_hand or 'A of Diamonds' in player_hand:
+                sum2 = sum2 - 10
+                if int(sum2) > 21:
+                     props = {
+                    "message": "you lose",
+                    "message2": "your hand is " + str(player_hand) ,
+                    "message3": "the dealer's hand is " + str(dealer_hand),
+                    }
+            else:
+                props = {
+                "message": "you lose",
+                "message2": "your hand is " + str(player_hand) ,
+                "message3": "the dealer's hand is " + str(dealer_hand),
+                }
+        else: 
+            props = {
+            "message": "your hand is " + str(player_hand) ,
+            "message2": "the dealer's hand is " + str(dealer_hand),
+            "message3": "total value in hand = " + str(sum1),
+            "message4": "total value in dealer hand = " + str(sum2)
+            }
+    if int(sum1) == int(sum2):
+        props = {
+        "message": "you lose",
+        "message2": "your hand is " + str(player_hand) ,
+        "message3": "the dealer's hand is " + str(dealer_hand),
         }
     return render_template('index.html', props = props)

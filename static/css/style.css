@@ -1,0 +1,48 @@
+body    {
+    background-image: url("https://media.istockphoto.com/photos/green-felt-and-playing-chips-abstract-background-picture-id672556284?k=6&m=672556284&s=612x612&w=0&h=ofClcfW6AHnx698r8tB-EIvdaajhch9I-Y2aH3bw4A4=");
+    background-color: #CCCCCC;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+h2  {
+    text-align: center;
+    font-size: 50px;
+}
+p   {
+    color: white;
+}
+#img1  {
+    position:relative;
+    top: 200px;
+    left: 30%;
+    border-radius: 10px;
+    width: 100px;
+    height: 150px;
+}
+#img2  {
+    position:relative;
+    top: 200px;
+    left: 30%;
+    border-radius: 10px;
+    width: 100px;
+    height: 150px;
+}
+#img3  {
+    position:relative;
+    top: 200px;
+    left: 30%;
+    border-radius: 10px;
+    width: 100px;
+    height: 150px;
+}
+#img4  {
+    position:relative;
+    top: 200px;
+    left: 30%;
+    border-radius: 10px;
+    width: 100px;
+    height: 150px;
+}
