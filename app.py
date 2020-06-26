@@ -9,11 +9,19 @@ def ace():
             sum1 = sum1 - 10
             props = {
             "message": "your hand is " + str(player_hand) ,
-            "message2": "the dealer's hand is " + str(dealer_hand)
+            "message2": "the dealer's hand is " + str(dealer_hand),
+            "pcard1": deck_pic[player_hand[0]],
+            "pcard2": deck_pic[player_hand[1]],
+            "dcard1": deck_pic[dealer_hand[0]],
+            "dcard2": deck_pic[dealer_hand[1]],
             } 
     else:
         props = {
-        "message": "you lose"
+        "message": "you lose",
+        "pcard1": deck_pic[player_hand[0]],
+        "pcard2": deck_pic[player_hand[1]],
+        "dcard1": deck_pic[dealer_hand[0]],
+        "dcard2": deck_pic[dealer_hand[1]],
         }
 #______DECK_______
 deck_pic = {
@@ -127,7 +135,9 @@ deck_dict = {
 # -- Routes section --
 import random
 player_hand = []
+player_image = []
 dealer_hand = []
+dealer_image = []
 deck = []
 suits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 numbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
@@ -150,35 +160,47 @@ def index():
     if len(player_hand) == 0:
         random.shuffle(deck)
         player_hand.append(deck[0])
+        player_image.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         player_hand.append(deck[0])
+        player_image.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         dealer_hand.append(deck[0])
+        dealer_image.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         dealer_hand.append(deck[0])
+        dealer_image.append(deck_pic[deck[0]])
         deck.remove(deck[0])
     else:
         while len(player_hand) > 0:
             deck.append(player_hand[0])
             player_hand.remove(player_hand[0])
+            player_image.remove(player_image[0])
         while len(dealer_hand) > 0:
             deck.append(dealer_hand[0])
             dealer_hand.remove(dealer_hand[0])
+            dealer_image.remove(dealer_image[0])
         random.shuffle(deck)
         player_hand.append(deck[0])
+        player_image.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         player_hand.append(deck[0])
+        player_image.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         dealer_hand.append(deck[0])
+        dealer_image.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         dealer_hand.append(deck[0])
+        dealer_image.append(deck_pic[deck[0]])
         deck.remove(deck[0])
     props = {
         "message": "your hand is " + str(player_hand) ,
         "message2": "the dealer's hand is " + str(dealer_hand),
-        "pcard1": deck_pic['2 of Spades']
+        "pcards": player_image,
+        "dcards": dealer_image
         }
-    return render_template('index.html', props = props, time=datetime.now())
+    print(player_image)
+    return render_template('index.html', props = props, time = datetime.now())
 #_______HANDS_________
 @app.route('/hit')
 def hit():
@@ -186,45 +208,78 @@ def hit():
     for i in range(0, len(player_hand)):
         sum1 = sum1 + (deck_dict[player_hand[i]])
     player_hand.append(deck[0])
+    player_image.append(deck_pic[deck[0]])
     deck.remove(deck[0])
     sum1 = sum1 + (deck_dict[player_hand[-1]])
     if int(sum1) > 21:
         if 'A of Spades' in player_hand:
             deck_dict['A of Spades'] = 1
-            props = {
-            "message": "your hand is " + str(player_hand) ,
-            "message2": "the dealer's hand is " + str(dealer_hand)
-            }
+            sum1 = 0
+            for i in range(0, len(player_hand)):
+                sum1 = sum1 + (deck_dict[player_hand[i]])
+            if int(sum1) > 21:
+                props = {
+                "message": "your hand is " + str(player_hand) ,
+                "message2": "the dealer's hand is " + str(dealer_hand),
+                "message3": "you lose!",
+                "pcards": player_image,
+                "dcards": dealer_image
+                }
         elif 'A of Hearts' in player_hand:
             deck_dict['A of Hearts'] = 1
-            props = {
-            "message": "your hand is " + str(player_hand) ,
-            "message2": "the dealer's hand is " + str(dealer_hand)
-            }
+            sum1 = 0
+            for i in range(0, len(player_hand)):
+                sum1 = sum1 + (deck_dict[player_hand[i]])
+            if int(sum1) > 21:
+                props = {
+                "message": "your hand is " + str(player_hand) ,
+                "message2": "the dealer's hand is " + str(dealer_hand),
+                "message3": "you lose!",
+                "pcards": player_image,
+                "dcards": dealer_image
+                }
         elif 'A of Clubs' in player_hand:
             deck_dict['A of Clubs'] = 1
-            props = {
-            "message": "your hand is " + str(player_hand) ,
-            "message2": "the dealer's hand is " + str(dealer_hand)
-            }
+            sum1 = 0
+            for i in range(0, len(player_hand)):
+                sum1 = sum1 + (deck_dict[player_hand[i]])
+            if int(sum1) > 21:
+                props = {
+                "message": "your hand is " + str(player_hand) ,
+                "message2": "the dealer's hand is " + str(dealer_hand),
+                "message3": "you lose!",
+                "pcards": player_image,
+                "dcards": dealer_image
+                }
         elif 'A of Diamonds' in player_hand:
             deck_dict['A of Diamonds'] = 1
-            props = {
-            "message": "your hand is " + str(player_hand) ,
-            "message2": "the dealer's hand is " + str(dealer_hand)
-            }
+            sum1 = 0
+            for i in range(0, len(player_hand)):
+                sum1 = sum1 + (deck_dict[player_hand[i]])
+            if int(sum1) > 21:
+                props = {
+                "message": "your hand is " + str(player_hand) ,
+                "message2": "the dealer's hand is " + str(dealer_hand),
+                "message3": "you lose!",
+                "pcards": player_image,
+                "dcards": dealer_image
+                }
         else:
              props = {
                 "message": "you lose",
                 "message2": "your hand is " + str(player_hand) ,
                 "message3": "the dealer's hand is " + str(dealer_hand),
+                "pcards": player_image,
+                "dcards": dealer_image
                 }
     else:
         props = {
             "message": "your hand is " + str(player_hand) ,
-            "message2": "the dealer's hand is " + str(dealer_hand)
+            "message2": "the dealer's hand is " + str(dealer_hand),
+            "pcards": player_image,
+            "dcards": dealer_image
             }
-    return render_template('index.html', props = props)
+    return render_template('index.html', props = props, time = datetime.now())
 @app.route('/stand')
 def stand():
     sum1 = 0
@@ -238,53 +293,71 @@ def stand():
         sum2 = sum2 + (deck_dict[dealer_hand[i]])
     while int(sum2) < 17:
         dealer_hand.append(deck[0])
+        dealer_image.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         sum2 = sum2 + (deck_dict[dealer_hand[-1]])
         if int(sum2) > 21:
-            if 'A of Spades' in player_hand or 'A of Hearts' in player_hand or 'A of Clubs' in player_hand or 'A of Diamonds' in player_hand:
+            if 'A of Spades' in dealer_hand or 'A of Hearts' in dealer_hand or 'A of Clubs' in dealer_hand or 'A of Diamonds' in dealer_hand:
                 sum2 = sum2 - 10
-                if sum2 > sum1:
+                if sum2 >= sum1:
                     props = {
                     "message": "your hand is " + str(player_hand) ,
                     "message2": "the dealer's hand is " + str(dealer_hand),
                     "message3": "you lose",
-                }
-            else:  
+                    "pcards": player_image,
+                    "dcards": dealer_image
+                    }
+                else:
+                    break
+            else: 
                 props = {
                 "message": "your hand is " + str(player_hand) ,
                 "message2": "the dealer's hand is " + str(dealer_hand),
-                "message3": "you win"
+                "message3": "you win",
+                "pcards": player_image,
+                "dcards": dealer_image
                 }
-    while int(sum1) > int(sum2):
-        dealer_hand.append(deck[0])
-        deck.remove(deck[0])
-        sum2 = sum2 + (deck_dict[dealer_hand[-1]])
-        if int(sum2) > 21:
-            if 'A of Spades' in player_hand or 'A of Hearts' in player_hand or 'A of Clubs' in player_hand or 'A of Diamonds' in player_hand:
-                sum2 = sum2 - 10
-                if int(sum2) > 21:
-                     props = {
-                    "message": "you lose",
+        else:
+            break
+    if int(sum2) >= 17:
+        while int(sum1) > int(sum2):
+            dealer_hand.append(deck[0])
+            dealer_image.append(deck_pic[deck[0]])
+            deck.remove(deck[0])
+            sum2 = sum2 + (deck_dict[dealer_hand[-1]])
+            if int(sum2) > 21:
+                if 'A of Spades' in dealer_hand or 'A of Hearts' in dealer_hand or 'A of Clubs' in dealer_hand or 'A of Diamonds' in dealer_hand:
+                    sum2 = sum2 - 10
+                    if int(sum2) > 21:
+                        props = {
+                        "message": "you win",
+                        "message2": "your hand is " + str(player_hand) ,
+                        "message3": "the dealer's hand is " + str(dealer_hand),
+                        "pcards": player_image,
+                        "dcards": dealer_image
+                        }
+                else:
+                    props = {
+                    "message": "you win",
                     "message2": "your hand is " + str(player_hand) ,
                     "message3": "the dealer's hand is " + str(dealer_hand),
+                    "pcards": player_image,
+                    "dcards": dealer_image
                     }
-            else:
+            elif int(sum1) <= int(sum2):
                 props = {
                 "message": "you lose",
                 "message2": "your hand is " + str(player_hand) ,
                 "message3": "the dealer's hand is " + str(dealer_hand),
+                "pcards": player_image,
+                "dcards": dealer_image
                 }
-        else: 
+        else:
             props = {
             "message": "your hand is " + str(player_hand) ,
             "message2": "the dealer's hand is " + str(dealer_hand),
-            "message3": "total value in hand = " + str(sum1),
-            "message4": "total value in dealer hand = " + str(sum2)
+            "message3": "you lose!",
+            "pcards": player_image,
+            "dcards": dealer_image
             }
-    if int(sum1) == int(sum2):
-        props = {
-        "message": "you lose",
-        "message2": "your hand is " + str(player_hand) ,
-        "message3": "the dealer's hand is " + str(dealer_hand),
-        }
-    return render_template('index.html', props = props)
+        return render_template('index.html', props = props, time = datetime.now)

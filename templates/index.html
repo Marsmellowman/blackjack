@@ -6,18 +6,25 @@
 </head>
 <body>
     <h2 style="color:white;">Let's Play Blackjack!</h2>
-    <p style="color:white;">{{props.message}}</p>
-    <p style="color:white;">{{props.message2}}</p>
-    <p style="color:white;">{{props.message3}}</p>
+    <p class = "text">{{props.message}}</p>
+    <p class = "text">{{props.message2}}</p>
+    <p class = "text">{{props.message3}}</p>
     <form>
         <input type="radio" id="Hit" name="blackjack" value="Hit" onclick="window.location='/hit'"/>
-        <label for="Hit" style="color:white;">Hit</label><br>
+        <label class="text" for="Hit">Hit</label><br>
         <input type="radio" id="Stand" name="blackjack" value="Stand" onclick="window.location='/stand'"/>
-        <label for="Stand" style="color:white;">Stand</label><br> 
+        <label class="text" for="Stand">Stand</label><br> 
     </form>
-    <img id="img1" src={{props.pcard1}} alt="Player Card 1" >
-    <img id="img2" src={{props.pcard2}} alt="Player Card 2">
-    <img id="img3" src={{props.pcard3}} alt="Player Card 3">
-    <img id="img4" src={{props.pcard4}} alt="Player Card 4">
+    <button type="reset" onclick="window.location='/'" value="Reset">Reset</button>
+    <div>
+    {% for pcard in props.pcards %}
+    <img class = "pcards" src = "{{pcard}}">
+    {% endfor %}
+    </div>
+    <div>
+    {% for dcard in props.dcards %}
+    <img class = "dcards" src = "{{dcard}}">
+    {% endfor %}
+    </div>
 </body>
 </html>
