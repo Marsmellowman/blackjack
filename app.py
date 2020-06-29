@@ -373,3 +373,4 @@ def stand():
     #             "pcards": player_image,
     #             "dcards": dealer_image
     #             }
+
