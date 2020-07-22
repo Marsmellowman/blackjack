@@ -78,6 +78,62 @@ deck_pic = {
     'A of Clubs': "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Ace_of_clubs.svg/83px-Ace_of_clubs.svg.png",
     'A of Diamonds': "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ace_of_diamonds.svg/83px-Ace_of_diamonds.svg.png"
     }
+
+deck_back = {
+    '2 of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '2 of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '2 of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '2 of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '3 of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '3 of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '3 of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '3 of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '4 of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '4 of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '4 of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '4 of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '5 of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '5 of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '5 of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '5 of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '6 of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '6 of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '6 of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '6 of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '7 of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '7 of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '7 of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '7 of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '8 of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '8 of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '8 of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '8 of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '9 of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '9 of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '9 of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '9 of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '10 of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '10 of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '10 of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    '10 of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'J of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'J of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'J of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'J of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'Q of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'Q of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'Q of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'Q of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'K of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'K of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'K of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'K of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'A of Spades': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'A of Hearts': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'A of Clubs': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png",
+    'A of Diamonds': "https://i.pinimg.com/originals/10/80/a4/1080a4bd1a33cec92019fab5efb3995d.png"
+    }
+
 deck_dict = {
     '2 of Spades': 2,
     '2 of Hearts': 2,
@@ -138,6 +194,7 @@ player_hand = []
 player_image = []
 dealer_hand = []
 dealer_image = []
+dealer_revealed = []
 deck = []
 suits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 numbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
@@ -167,9 +224,11 @@ def index():
         deck.remove(deck[0])
         dealer_hand.append(deck[0])
         dealer_image.append(deck_pic[deck[0]])
+        dealer_revealed.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         dealer_hand.append(deck[0])
-        dealer_image.append(deck_pic[deck[0]])
+        dealer_image.append(deck_back[deck[0]])
+        dealer_revealed.append(deck_pic[deck[0]])
         deck.remove(deck[0])
     else:
         while len(player_hand) > 0:
@@ -180,6 +239,7 @@ def index():
             deck.append(dealer_hand[0])
             dealer_hand.remove(dealer_hand[0])
             dealer_image.remove(dealer_image[0])
+            dealer_revealed.remove(dealer_revealed[0])
         random.shuffle(deck)
         player_hand.append(deck[0])
         player_image.append(deck_pic[deck[0]])
@@ -189,13 +249,13 @@ def index():
         deck.remove(deck[0])
         dealer_hand.append(deck[0])
         dealer_image.append(deck_pic[deck[0]])
+        dealer_revealed.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         dealer_hand.append(deck[0])
-        dealer_image.append(deck_pic[deck[0]])
+        dealer_image.append(deck_back[deck[0]])
+        dealer_revealed.append(deck_pic[deck[0]])
         deck.remove(deck[0])
     props = {
-        "message": "your hand is " + str(player_hand) ,
-        "message2": "the dealer's hand is " + str(dealer_hand),
         "pcards": player_image,
         "dcards": dealer_image
         }
@@ -211,166 +271,93 @@ def hit():
     player_image.append(deck_pic[deck[0]])
     deck.remove(deck[0])
     sum1 = sum1 + (deck_dict[player_hand[-1]])
+    props = {
+        "pcards": player_image,
+        "dcards": dealer_image
+        }
     if int(sum1) > 21:
-        if 'A of Spades' in player_hand:
-            deck_dict['A of Spades'] = 1
-            sum1 = 0
-            for i in range(0, len(player_hand)):
-                sum1 = sum1 + (deck_dict[player_hand[i]])
-            if int(sum1) > 21:
-                props = {
-                "message": "your hand is " + str(player_hand) ,
-                "message2": "the dealer's hand is " + str(dealer_hand),
-                "message3": "you lose!",
+        deck_dict['A of Diamonds'] = 1
+        deck_dict['A of Hearts'] = 1
+        deck_dict['A of Spades'] = 1
+        deck_dict['A of Clubs'] = 1
+        if int(sum1) > 21:
+            props = {
+                "message3": "you lose",
                 "pcards": player_image,
-                "dcards": dealer_image
+                "dcards": dealer_revealed
                 }
-        elif 'A of Hearts' in player_hand:
-            deck_dict['A of Hearts'] = 1
-            sum1 = 0
-            for i in range(0, len(player_hand)):
-                sum1 = sum1 + (deck_dict[player_hand[i]])
-            if int(sum1) > 21:
-                props = {
-                "message": "your hand is " + str(player_hand) ,
-                "message2": "the dealer's hand is " + str(dealer_hand),
-                "message3": "you lose!",
-                "pcards": player_image,
-                "dcards": dealer_image
-                }
-        elif 'A of Clubs' in player_hand:
-            deck_dict['A of Clubs'] = 1
-            sum1 = 0
-            for i in range(0, len(player_hand)):
-                sum1 = sum1 + (deck_dict[player_hand[i]])
-            if int(sum1) > 21:
-                props = {
-                "message": "your hand is " + str(player_hand) ,
-                "message2": "the dealer's hand is " + str(dealer_hand),
-                "message3": "you lose!",
-                "pcards": player_image,
-                "dcards": dealer_image
-                }
-        elif 'A of Diamonds' in player_hand:
-            deck_dict['A of Diamonds'] = 1
-            sum1 = 0
-            for i in range(0, len(player_hand)):
-                sum1 = sum1 + (deck_dict[player_hand[i]])
-            if int(sum1) > 21:
-                props = {
-                "message": "your hand is " + str(player_hand) ,
-                "message2": "the dealer's hand is " + str(dealer_hand),
-                "message3": "you lose!",
-                "pcards": player_image,
-                "dcards": dealer_image
-                }
-        else:
-             props = {
-                "message": "you lose",
-                "message2": "your hand is " + str(player_hand) ,
-                "message3": "the dealer's hand is " + str(dealer_hand),
-                "pcards": player_image,
-                "dcards": dealer_image
-                }
-    else:
-        props = {
-            "message": "your hand is " + str(player_hand) ,
-            "message2": "the dealer's hand is " + str(dealer_hand),
-            "pcards": player_image,
-            "dcards": dealer_image
-            }
     return render_template('index.html', props = props, time = datetime.now())
+
 @app.route('/stand')
 def stand():
     sum1 = 0
     for i in range(0, len(player_hand)):
         sum1 = sum1 + (deck_dict[player_hand[i]])
+    props = {
+        "pcards": player_image,
+        "dcards": dealer_revealed
+        }
+    if int(sum1) > 21:
+        deck_dict['A of Diamonds'] = 1
+        deck_dict['A of Hearts'] = 1
+        deck_dict['A of Spades'] = 1
+        deck_dict['A of Clubs'] = 1
         if int(sum1) > 21:
-            if 'A of Spades' in player_hand or 'A of Hearts' in player_hand or 'A of Clubs' in player_hand or 'A of Diamonds' in player_hand:
-                sum1 = sum1 - 10
+            props = {
+                "message3": "you lose",
+                "pcards": player_image,
+                "dcards": dealer_revealed
+                }
     sum2 = 0
     for i in range(0, len(dealer_hand)):
         sum2 = sum2 + (deck_dict[dealer_hand[i]])
     while int(sum2) < 17:
         dealer_hand.append(deck[0])
-        dealer_image.append(deck_pic[deck[0]])
+        dealer_revealed.append(deck_pic[deck[0]])
         deck.remove(deck[0])
         sum2 = sum2 + (deck_dict[dealer_hand[-1]])
         if int(sum2) > 21:
-            if 'A of Spades' in dealer_hand or 'A of Hearts' in dealer_hand or 'A of Clubs' in dealer_hand or 'A of Diamonds' in dealer_hand:
-                sum2 = sum2 - 10
-                if sum2 >= sum1:
-                    props = {
-                    "message": "your hand is " + str(player_hand) ,
-                    "message2": "the dealer's hand is " + str(dealer_hand),
-                    "message3": "you lose",
-                    "pcards": player_image,
-                    "dcards": dealer_image
-                    }
-                else:
-                    break
-            else: 
+            deck_dict['A of Diamonds'] = 1
+            deck_dict['A of Hearts'] = 1
+            deck_dict['A of Spades'] = 1
+            deck_dict['A of Clubs'] = 1
+            if int(sum1) > 21:
                 props = {
-                "message": "your hand is " + str(player_hand) ,
-                "message2": "the dealer's hand is " + str(dealer_hand),
-                "message3": "you win",
-                "pcards": player_image,
-                "dcards": dealer_image
-                }
-        else:
-            break
-    if int(sum2) >= 17:
-        while int(sum1) > int(sum2):
-            dealer_hand.append(deck[0])
-            dealer_image.append(deck_pic[deck[0]])
-            deck.remove(deck[0])
-            sum2 = sum2 + (deck_dict[dealer_hand[-1]])
-            if int(sum2) > 21:
-                if 'A of Spades' in dealer_hand or 'A of Hearts' in dealer_hand or 'A of Clubs' in dealer_hand or 'A of Diamonds' in dealer_hand:
-                    sum2 = sum2 - 10
-                    if int(sum2) > 21:
-                        props = {
-                        "message": "you win",
-                        "message2": "your hand is " + str(player_hand) ,
-                        "message3": "the dealer's hand is " + str(dealer_hand),
-                        "pcards": player_image,
-                        "dcards": dealer_image
-                        }
-                else:
-                    props = {
-                    "message": "you win",
-                    "message2": "your hand is " + str(player_hand) ,
-                    "message3": "the dealer's hand is " + str(dealer_hand),
+                    "message3": "you win",
                     "pcards": player_image,
-                    "dcards": dealer_image
+                    "dcards": dealer_revealed
                     }
-            else:
-                break
-        if int(sum2) >= int(sum1) and int(sum2) < 21:
-            props = {
-            "message": "your hand is " + str(player_hand) ,
-            "message2": "the dealer's hand is " + str(dealer_hand),
+    while int(sum1) > int(sum2):
+        dealer_hand.append(deck[0])
+        dealer_revealed.append(deck_pic[deck[0]])
+        deck.remove(deck[0])
+        sum2 = sum2 + (deck_dict[dealer_hand[-1]])
+        if int(sum2) > 21:
+            deck_dict['A of Diamonds'] = 1
+            deck_dict['A of Hearts'] = 1
+            deck_dict['A of Spades'] = 1
+            deck_dict['A of Clubs'] = 1
+            if int(sum1) > 21:
+                props = {
+                    "message3": "you win",
+                    "pcards": player_image,
+                    "dcards": dealer_revealed
+                    }
+    if int(sum2) >= int(sum1) and int(sum2) <= 21:
+        props = {
             "message3": "you lose!",
             "pcards": player_image,
-            "dcards": dealer_image
+            "dcards": dealer_revealed
             }
-        else:
+    elif int(sum2) > 21:
+        deck_dict['A of Diamonds'] = 1
+        deck_dict['A of Hearts'] = 1
+        deck_dict['A of Spades'] = 1
+        deck_dict['A of Clubs'] = 1
+        if int(sum2) > 21:
             props = {
-            "message": "your hand is " + str(player_hand) ,
-            "message2": "the dealer's hand is " + str(dealer_hand),
-            "message3": "you win!",
-            "pcards": player_image,
-            "dcards": dealer_image
-            }
-
+                "message3": "you win!",
+                "pcards": player_image,
+                "dcards": dealer_revealed  
+                }
     return render_template('index.html', props = props, time = datetime.now)
-
-    # elif int(sum1) <= int(sum2):
-    #             props = {
-    #             "message": "you lose",
-    #             "message2": "your hand is " + str(player_hand) ,
-    #             "message3": "the dealer's hand is " + str(dealer_hand),
-    #             "pcards": player_image,
-    #             "dcards": dealer_image
-    #             }
-
